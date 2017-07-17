@@ -1,30 +1,32 @@
+package guvi;
 import java.util.Scanner;
 public class Player3 {
+	
+	public class Palindrome {
 
+	   
+	    public void main(String[] args) {
+	      int n,an=0,a=0,t,i=0,t1;
+	        
+	        
+	        Scanner s2=new Scanner(System.in);
+	        n=s2.nextInt();
+	        while(n>0)
+	        {
+	            t=n%10;
+	            a=a*10+(t*t*t);
+	            n=n/10;
+	    }
+	        if(a==n)
+	        {
+	            System.out.println("palindrome");
+	        }
+	        else
+	                {
+	                    System.out.println("not palindrome");  
+	                }
+	    
+	}}
+	  
 
-	public static void main(String[] args) {
-			Scanner scr=new Scanner(System.in);
-		System.out.println("Enter the Dag");
-		int sum=0;
-		String str=scr.nextLine();
-		char c=(char)(92);
-		str=str.replace(c, ',');
-		
-	String[] b=str.split(','+"");
-	for(int i=0;i<b.length;i++){
-		int max=0;
-		String[] abc=b[i].split(" ");
-		for(int j=0;j<abc.length;j++){
-			
-			if(!(abc[j].equals("/")||abc[j].equals("")))
-				{
-				int v=Integer.parseInt(abc[j]);
-				if(v>max)
-					max=v;
-				}
-		}
-		sum+=max;
-	}
-System.out.println(sum);
-	}
 }

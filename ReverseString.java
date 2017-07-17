@@ -1,18 +1,20 @@
-package guviprgm;
 import java.util.Scanner;
-	 
-	public class ReverseString {
-	 
-	    public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        System.out.print("Enter input: ");
-	        String input = scanner.nextLine();
-	        String reverse = "";
-	        for (int i = input.length() - 1; i >= 0; i--) {
-	            char ch = input.charAt(i);
-	            reverse = reverse + ch;
-	        }
-	        System.out.println("Reversed String = " + reverse);
+public class ReverseString {
+	public static void main(String[] args) {
+			Scanner s=new Scanner(System.in);
+			String str;
+			str=s.next();
+			int j=str.length();
+			j--;
+			char str1[]=str.toCharArray();
+			char temp;
+			for(int i=0;i<str1.length/2;i++){
+				temp=str1[i];
+				str1[i]=str1[j];
+				str1[j]=temp;
+				j--;
+			}
+			str=new String(str1);
+			System.out.println(str);
 	    }
-	 
-	}
+		}
